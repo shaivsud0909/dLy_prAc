@@ -11,6 +11,7 @@ def home():
     return {"message":"welcome to the flask runimg"}
 
 
+
 def creating_user(user: user):
     # Read existing data
     try:
@@ -27,6 +28,8 @@ def creating_user(user: user):
         json.dump(data, f, indent=2)
 
     return {"message": "success"}
+
+
 
 def login(user: user):
     try:
@@ -50,6 +53,7 @@ def login(user: user):
 
 
 
+
 def dashboard(request: Request):
     token = request.cookies.get("access_token")
 
@@ -60,6 +64,8 @@ def dashboard(request: Request):
         "message": "Welcome to Dashboard",
         "status": "Logged in"
     }
+
+
 
 
 
